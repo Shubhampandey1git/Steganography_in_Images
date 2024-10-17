@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steganography</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Embed a Secret Message in an Image</h1>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <label for="image">Select an image:</label>
+        <input type="file" name="image" accept="image/*" required>
+        <br>
+        <label for="message">Enter your secret message:</label>
+        <input type="text" name="message" required>
+        <br>
+        <button type="submit">Embed Message</button>
+    </form>
+    <hr>
+    <h2>Extract a Secret Message</h2>
+    <a href="/extract_form">Go to Extract Form</a>
+</body>
+</html>
